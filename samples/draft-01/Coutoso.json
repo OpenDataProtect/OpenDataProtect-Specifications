@@ -1,0 +1,111 @@
+{
+  "$schema": "/organization",
+  "Label": "Groupe Système U",
+  "Records": [
+    {
+      "$schema": "/record",
+      "Label": "Mon registre",
+      "DataController": {
+        "$shema": "/person",
+        "Name": "",
+        "Address": "",
+        "ZipCode":""
+      },
+      "DataProtectionOfficer": {
+        "$schema": "/person",
+        "Id": 1234,
+        "Type": "Natural|Legal",
+        "AvatarUrl":"",
+        "EmailAddress":"",
+        "PhoneNumber":"",
+        "CountryCode":"",
+        "Name": "",
+        "Address": "",
+        "ZipCode":""
+      },
+      "UERepresentative": {
+        "$schema": "/person",
+        "Type": "Natural|Legal",
+        "Id": 1234,
+        "Name": "",
+        "Description": "",
+        "EmailAddress":"",
+        "Address": "",
+        "ZipCode":"",
+        "Siret":"",
+        "RelationShips":[
+
+        ]
+      },
+      "DataProcessing": [
+        {
+          "$schema": "/dataprocessing",
+          "Id": "1234",
+          "Label": "Toto",
+          "Tags": ["Actif", "En cours"],
+          "State": "Publié",
+          "Stakeholders": [
+            {
+              "$schema": "/stakeholder",
+              "Type": "JointController|Processor|ThirdParties|Other",
+              "OtherLabel": "",
+              "Person": {
+                "$shema": "/person",
+                "Id": 1234,
+                "Type": "Natural|Legal",
+                "Name": "",
+                "Coordonnées": ""
+              }
+            }
+          ],
+          "Purposes": [
+            {
+              "$schema": "/purpose",
+              "Id":1234,
+              "Label": "Faire du cash",
+              "PersonalDataSets": [
+                {
+                  "$schema":"/personalDataSet",
+                  "Id": 1234,
+                  "Label":"Curriculum vitae",
+                  "RetentionRules":{
+                    "activeBaseRetentionTime":""
+                  },
+                  "Sensitive":true, 
+                  "Applications": [
+                    {
+                      "$schema": "/application",
+                      "Id": 1234,
+                      "Label": "Office 365",
+                      "Type":"|"
+                    }
+                  ],
+                  "PersonalDataFields":[
+                    {
+                      "$schema":"/personalDataFields",
+                      "Id":1234,
+                      "Label":"Test",
+                      "Sensitive":true
+                    }
+                  ]
+                }
+              ],
+              "Recipients":[
+                {
+                  "$schema": "/recipient",
+                  "Id": 1234,
+                  "Label":"1213",
+                  "Vendor":{
+                    "$schema":"/person",
+                    "Id":1234,
+                    "Label":"Test"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

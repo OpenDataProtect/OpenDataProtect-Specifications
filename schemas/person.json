@@ -1,0 +1,20 @@
+{
+  "$id": "https://dastra.eu/person.schema.json",
+  "$schema": "https://open-data-protect.org/draft-01/person#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type":"string",
+      "description":"The id of the person"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "The person's first name."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The person's last name."
+    }
+  }
+}
