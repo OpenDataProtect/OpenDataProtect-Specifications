@@ -1,0 +1,21 @@
+{
+  "$id": "https://open-data-protect.org/datasubject.schema.json",
+  "$schema": "https://open-data-protect.org/draft-01/datasubject#",
+  "title": "DataSubject",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type":"string",
+      "description":"The id of the record"
+    },
+    "type": {
+      "type": "string",
+      "enum":[""],
+      "description": "Data subject type"
+    },
+    "label": {
+      "type": "string",
+      "description": "A country code"
+    }
+  }
+}

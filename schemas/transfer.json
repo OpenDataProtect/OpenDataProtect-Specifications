@@ -1,0 +1,21 @@
+{
+  "$id": "https://open-data-protect.org/transfer.schema.json",
+  "$schema": "https://open-data-protect.org/draft-01/transfer#",
+  "title": "Transfer",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type":"string",
+      "description":"The id of the record"
+    },
+    "countryCode": {
+      "type": "string",
+      "description": "A country code"
+    },
+    "safeGuardType": {
+      "type": "string",
+      "description": "The safe guard type of the transfer",
+      "enum": [""]
+    }
+  }
+}

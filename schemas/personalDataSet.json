@@ -1,0 +1,16 @@
+{
+  "$id": "https://open-data-protect.org/personalDataSet.schema.json",
+  "$schema": "https://open-data-protect.org/draft-01/personalDataSet#",
+  "title": "PersonalDataSet",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type":"string",
+      "description":"The id of the record"
+    },
+    "label": {
+      "type": "string",
+      "description": ""
+    }
+  }
+}
