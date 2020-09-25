@@ -1,0 +1,16 @@
+{
+  "$id": "https://open-data-protect.org/recipient.schema.json",
+  "$schema": "https://open-data-protect.org/draft-01/recipient#",
+  "title": "Purpose",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type":"string",
+      "description":"The id of the person"
+    },
+    "person": {
+      "type": "string",
+      "description": "Label"
+    }
+  }
+}

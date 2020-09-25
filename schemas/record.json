@@ -6,11 +6,17 @@
   "properties": {
     "id":{
       "type":"string",
-      "description":"The id of the person"
+      "description":"The id of the record"
     },
     "label": {
       "type": "string",
       "description": "Label"
+    },
+    "dataProcessing":{
+      "type": "array",
+      "description":"The list of data processing",
+      "items": { "$ref": "dataProcessing.json" },
+      "default": []
     }
   }
 }

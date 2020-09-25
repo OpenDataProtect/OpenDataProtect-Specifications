@@ -1,0 +1,173 @@
+{
+  "$schema": "/organization",
+  "Label": "Groupe Système U",
+  "Records": [
+    {
+      "$schema": "/record",
+      "Label": "Mon registre",
+      "DataController": {
+        "$shema": "/person",
+        "Type": "Natural|Legal",
+        "AvatarUrl":"",
+        "EmailAddress":"",
+        "PhoneNumber":"",
+        "CountryCode":"",
+        "Name": "",
+        "Address": "",
+        "ZipCode":""
+      },
+      "DataProtectionOfficer": {
+        "$schema": "/person",
+        "Id": 1234,
+        "Type": "Natural|Legal",
+        "AvatarUrl":"",
+        "EmailAddress":"",
+        "PhoneNumber":"",
+        "CountryCode":"",
+        "Name": "",
+        "Address": "",
+        "ZipCode":""
+      },
+      "UERepresentative": {
+        "$schema": "/person",
+        "Type": "Natural|Legal",
+        "AvatarUrl":"",
+        "EmailAddress":"",
+        "PhoneNumber":"",
+        "CountryCode":"",
+        "Name": "",
+        "Address": "",
+        "ZipCode":"",
+        "RelationShips":[
+
+        ]
+      },
+
+      "DataProcessors": [
+        {
+          "type":"array",
+          "items": {"$refs": "/dataprocessing"}
+        }
+      ],
+
+      "DataProcessing": [
+        {
+          "$schema": "/dataprocessing",
+          "Id": "1234",
+          "Label": "Toto",
+          "Tags": ["Actif", "En cours"],
+          "State": "Publié",
+          "Type":"Processor|DataController",
+          "DataControllers":[
+            {
+              "$schema":"/person",
+              "Id":1234
+            }
+          ],
+          "Stakeholders": [
+            {
+              "$schema": "/stakeholder",
+              "Type": "JointController|Processor|ThirdParties|Other",
+              "OtherLabel": "",
+              "Person": {
+                "$shema": "/person",
+                "Id": 1234,
+                "Type": "Natural|Legal",
+                "Name": "",
+                "Coordonnées": ""
+              }
+            }
+          ],
+          "Purposes": [
+            {
+              "$schema": "/purpose",
+              "Id":1234,
+              "Label": "Faire du cash",
+              "Description": "",
+              "LegalBasis":"Consent||...",
+              "LegalBasisDescription":""
+            }
+          ],
+          "DataSubjects":[
+            {
+              "$schema":"/dataSubject",
+              "Purposes":[1234,1235],
+              "Id": 1234,
+              "Type":"Type",
+              "ChildConcerned": false,
+              "Label":"Acheminement",
+              "MaxVolume":10,
+              "MinVolume":10
+            }
+          ],
+          "PersonalDataSets": [
+            {
+              "$schema":"/personalDataSet",
+              "Id": 1234,
+              "Label":"Curriculum vitae",
+              "Description":"Curriculum vitae",
+              "Source": "",
+              "Purposes":[12344,13214],
+              "ActiveBaseRetentionDescription":"",
+              "ActiveBaseRetentionReference":"",
+              "IntermediateArchivingRetentionDescription":"",
+              "IntermediateArchivingRetentionReference":"",
+              "DestructionDescription":"",
+              "DestructionReference":"",
+              "Sensitive":true,
+              "Applications": [
+                {
+                  "$schema": "/application",
+                  "Id": 1234,
+                  "Label": "Office 365",
+                  "Type":"|"
+                }
+              ],
+              "PersonalDataFields":[
+                {
+                  "$schema":"/personalDataFields",
+                  "Id":1234,
+                  "Label":"Test",
+                  "Sensitive":true
+                }
+              ]
+            }
+          ],
+          "Recipients":[
+            {
+              "$schema": "/recipient",
+              "Purposes":[12344,13214],
+              "PersonalDataCategories":[12344,13214],
+              "Id": 1234,
+              "Type":"Processor|Internal|ThirdParty",
+              "Label":"Nom de la catégorie de destinataire",
+              "Processor": {
+                "$schema":"/person",
+                "Id":1234,
+                "Label":"Test"
+              },
+              "Transfers":[
+                {
+                  "$schema": "/transfer",
+                  "Id": 1234,
+                  "Description":"Acheminement",
+                  "CountryCode":"fr",
+                  "SafeGuardType":"",
+                  "SafeGuardDescription":""
+                }
+              ]
+            }
+          ],
+          "SecurityMeasures":[
+            {
+              "$schema":"/securityMeasures",
+              "Id": 1234,
+              "Purposes":[1234,1235],
+              "Type":"Type"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
